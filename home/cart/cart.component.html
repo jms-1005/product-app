@@ -1,0 +1,14 @@
+<ActionBar title="Cart" class="action-bar">
+</ActionBar>
+
+<ScrollView class="page">
+    <StackLayout class="home-panel">
+        <!--Add your page content here-->
+        <StackLayout *ngFor="let item of cart">
+            <Label [text]="item.productName"></Label>
+            <Label [text]="item.qty"></Label>
+            <Label [text]="item.price * item.qty"></Label>
+        </StackLayout>
+		<Button text="Checkout"></Button>
+    </StackLayout>
+</ScrollView>

@@ -1,0 +1,19 @@
+<ActionBar title="Home">
+</ActionBar>
+
+<GridLayout>
+    <ScrollView>
+        <StackLayout class="home-panel">
+            <!--Add your page content here-->
+
+            <TextField [(ngModel)]="email" hint="Enter email"></TextField>
+            <TextField [(ngModel)]="password" hint="Enter password" secure="true"></TextField>
+
+
+            <Button text="Products Page" nsRouterLink="/products"></Button>
+            <Button text="Login" (tap)="loginUser()"></Button>
+
+        	<Button text="Sign up" (tap)="signUp()"></Button>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

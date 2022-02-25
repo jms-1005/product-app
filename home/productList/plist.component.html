@@ -1,0 +1,21 @@
+<ActionBar title="Product list" class="action-bar">
+</ActionBar>
+
+<ScrollView class="page">
+    <StackLayout class="home-panel">
+        <Label text="Product List"></Label>
+
+        <StackLayout class="productContainer"
+            *ngFor="let product of products">
+            <!-- <Image
+                [src]="product.image">
+            </Image> -->
+            <Label [text]="product.productName"></Label>
+            <Label [text]="product.price"></Label>
+            <Label [text]="product.rating"></Label>
+            <TextField value="0" #qty="ngModel" ngModel keyboardType="number"></TextField>
+            <Button text="Add to cart" (tap)="addToCart(product.productName, qty.value, product.price)"></Button>
+        </StackLayout>
+
+    </StackLayout>
+</ScrollView>

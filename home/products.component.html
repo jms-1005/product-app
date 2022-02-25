@@ -1,0 +1,20 @@
+<ActionBar title="Products" class="action-bar">
+</ActionBar>
+
+<TabView androidTabsPosition="bottom" selectedTabTextColor="red"
+    androidSelectedTabHighlightColor="red" tabBackgroundColor="blue">
+
+    <StackLayout *tabItem="{ title: 'Home'}">
+        <page-router-outlet name="home"></page-router-outlet>
+    </StackLayout>
+
+    <StackLayout *tabItem="{ title: 'Products' }">
+        <page-router-outlet name="products"></page-router-outlet>
+    </StackLayout>
+
+    <StackLayout *tabItem="{ title: 'Cart ' + totalItems }">
+        <page-router-outlet name="cart"></page-router-outlet>
+    </StackLayout>
+
+
+</TabView>

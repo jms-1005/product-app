@@ -1,0 +1,17 @@
+<ActionBar title="Product Home" class="action-bar">
+</ActionBar>
+
+<ScrollView class="page">
+    <StackLayout class="home-panel">
+
+        <TextField [(ngModel)]="productName" hint="Product Name"></TextField>
+        <TextField [(ngModel)]="image" hint="Paste image url here">
+        </TextField>
+        <TextField [(ngModel)]="price" hint="price">
+        </TextField>
+        <TextField [(ngModel)]="rating" hint="rating">
+        </TextField>
+
+		<Button text="Add Product" (tap)="addProduct()"></Button>
+    </StackLayout>
+</ScrollView>
